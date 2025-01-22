@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
         else if (Input.GetMouseButton(0))
         {
             Vector3 mousePosition = Input.mousePosition;
-
+            
             if (mousePosition.x < Screen.width / 2)
             {
                 moveDirection = Vector3.forward * horizontalSpeed;
@@ -87,6 +87,14 @@ public class Player : MonoBehaviour
             {
                 moveDirection = -Vector3.forward * horizontalSpeed;
             }
+        }
+        else if(Input.GetKey(KeyCode.LeftArrow))
+        {
+            moveDirection = Vector3.forward * horizontalSpeed;
+        }
+        else if(Input.GetKey(KeyCode.RightArrow))
+        {
+            moveDirection = -Vector3.forward * horizontalSpeed;
         }
         else
         {
